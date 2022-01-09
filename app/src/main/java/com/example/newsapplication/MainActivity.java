@@ -12,7 +12,7 @@ import com.google.android.material.tabs.TabLayout;
 public class MainActivity extends AppCompatActivity {
 
     TabLayout tabLayout;
-    TabItem home,health,enter,science,sports,technology;
+    TabItem home,health,enter,business,science,sports,technology;
     PagerAdapter pagerAdapter;
 
     @Override
@@ -28,10 +28,11 @@ public class MainActivity extends AppCompatActivity {
         science = findViewById(R.id.science);
         sports = findViewById(R.id.sports);
         technology = findViewById(R.id.technology);
+        business = findViewById(R.id.business);
 
         ViewPager viewPager = findViewById(R.id.fragmentContainer);
 
-        pagerAdapter = new MyAdapter(getSupportFragmentManager(),6);
+        pagerAdapter = new MyAdapter(getSupportFragmentManager(),7);
         viewPager.setAdapter(pagerAdapter);
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {

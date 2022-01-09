@@ -28,8 +28,10 @@ public class MyAdapter extends FragmentPagerAdapter {
             case 3:
                 return new scienceFragment();
             case 4:
-                return new sportsFragment();
+                return new businessFragment();
             case 5:
+                return new sportsFragment();
+            case 6:
                 return new technologyFragment();
             default:
                 return null;

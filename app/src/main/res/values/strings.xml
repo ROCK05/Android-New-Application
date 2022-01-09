@@ -6,6 +6,9 @@
     <string name="Technology">Technology</string>
     <string name="Health">Health</string>
     <string name="Science">Science</string>
+    <string name="Business">Business</string>
+    <string name="headdline">Headline \n Headline</string>
+    <string name="descriptionText">Description \n Description \n Description \n Description \n Description</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

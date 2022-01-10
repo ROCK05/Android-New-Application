@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginTop="2dp"
-    tools:context=".businessFragment">
+    tools:context=".fragments.businessFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewBusiness"
@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         android:layout_margin="0dp"
         android:layout_marginTop="2dp"
-        android:background="#AA5A5A"
+        android:background="@color/white"
         android:fitsSystemWindows="true"
         android:padding="2dp" />
 </FrameLayout>

@@ -5,6 +5,14 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
+import com.example.newsapplication.fragments.businessFragment;
+import com.example.newsapplication.fragments.entertainmentFragment;
+import com.example.newsapplication.fragments.healthFragment;
+import com.example.newsapplication.fragments.homeFragment;
+import com.example.newsapplication.fragments.scienceFragment;
+import com.example.newsapplication.fragments.sportsFragment;
+import com.example.newsapplication.fragments.technologyFragment;
+
 public class MyAdapter extends FragmentPagerAdapter {
 
     int tabcount;

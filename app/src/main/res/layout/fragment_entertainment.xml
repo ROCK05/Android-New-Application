@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginTop="2dp"
-    tools:context=".homeFragment">
+    tools:context=".fragments.homeFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewEntertainment"

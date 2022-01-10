@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     TabItem home,health,enter,business,science,sports,technology;
     PagerAdapter pagerAdapter;
 
+    String api = "fb7ad87d4c0a4e51af23b8caa9ea8248";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,12 +40,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 viewPager.setCurrentItem(tab.getPosition());
-//                if(tab.getPosition()==0 || tab.getPosition()==1 ||
-//                        tab.getPosition()==2 || tab.getPosition()==3 ||
-//                        tab.getPosition()==4 || tab.getPosition()==5)
-//                {
-//                    pagerAdapter.notifyDataSetChanged();
-//                }
+               if(tab.getPosition()==0 || tab.getPosition()==1 ||
+                       tab.getPosition()==2 || tab.getPosition()==3 ||
+                     tab.getPosition()==4 || tab.getPosition()==5 || tab.getPosition()==6)
+                {
+                    pagerAdapter.notifyDataSetChanged();
+                }
             }
 
             @Override

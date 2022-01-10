@@ -49,7 +49,7 @@ public class technologyFragment extends Fragment {
 
 
     private void findNews(){
-        utilities.getApiInterface().getCategoryNews(country,category, 100, apiKey).enqueue(new Callback<mainNews>() {
+        utilities.getApiInterface().getCategoryNews(country,category, 10, apiKey).enqueue(new Callback<mainNews>() {
             @Override
             public void onResponse(Call<mainNews> call, Response<mainNews> response) {
                 if(response.isSuccessful())

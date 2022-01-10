@@ -49,7 +49,7 @@ public class homeFragment extends Fragment {
 
 
     private void findNews(){
-        utilities.getApiInterface().getMainNews(country, 100, apiKey).enqueue(new Callback<mainNews>() {
+        utilities.getApiInterface().getMainNews(country, 10, apiKey).enqueue(new Callback<mainNews>() {
             @Override
             public void onResponse(Call<mainNews> call, Response<mainNews> response) {
                 if(response.isSuccessful())

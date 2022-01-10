@@ -30,7 +30,7 @@ public class homeFragment extends Fragment {
     String apiKey = "fb7ad87d4c0a4e51af23b8caa9ea8248";
     ArrayList<ModelClass> modelClassArrayList;
     newsAdapter adapter;
-    String country;
+    String country = "in";
     private RecyclerView recyclerView;
 
     @Nullable

@@ -7,8 +7,60 @@
     <string name="Health">Health</string>
     <string name="Science">Science</string>
     <string name="Business">Business</string>
-    <string name="headdline">Headline \n Headline</string>
+    <string name="World">World</string>
+
+    <string name="headline">Headline \n Headline</string>
     <string name="descriptionText">Description \n Description \n Description \n Description \n Description</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Switzerland">Switzerland</string>
+    <string name="China">China</string>
+    <string name="Colombia">Colombia</string>
+    <string name="Cuba">Cuba</string>
+    <string name="Czech_Republic">Czech Republic</string>
+    <string name="Germany">Germany</string>
+    <string name="Egypt">Egypt</string>
+    <string name="France">France</string>
+    <string name="United_Kingdom">United Kingdom</string>
+    <string name="gr">Greece</string>
+    <string name="hk">Hong Kong</string>
+    <string name="hu">Hungary</string>
+
+    <string name="id">Indonesia</string>
+    <string name="ie">Republic of Ireland</string>
+    <string name="il">Israel</string>
+    <string name="in">India</string>
+    <string name="it">Italy</string>
+    <string name="jp">Japan</string>
+    <string name="kr">South Korea</string>
+    <string name="lt">Lithuania</string>
+    <string name="lv">Latvia</string>
+    <string name="ma">Morocco</string>
+    <string name="mx">Mexico</string>
+    <string name="my">Malaysia</string>
+    <string name="ng">Nigeria</string>
+    <string name="nl">Netherlands</string>
+    <string name="no">Norway</string>
+    <string name="nz">New Zealand</string>
+    <string name="ph">Philippines</string>
+    <string name="pl">Poland</string>
+    <string name="pt">Portugal</string>
+    <string name="ro">Romania</string>
+    <string name="rs">Serbia</string>
+    <string name="ru">Russia</string>
+    <string name="sa">Saudi Arabia</string>
+    <string name="se">Sweden</string>
+    <string name="sg">Singapore</string>
+    <string name="si">Slovenia</string>
+    <string name="sk">Slovakia</string>
+    <string name="th">Thailand</string>
+    <string name="tr">Turkey</string>
+    <string name="tw">Taiwan</string>
+    <string name="ua">Ukraine</string>
+    <string name="us">United States</string>
+    <string name="ve">Venezuela</string>
+    <string name="za">South Africa</string>
+
+
+
 </resources>

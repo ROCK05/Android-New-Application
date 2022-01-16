@@ -12,7 +12,6 @@ public class utilities {
         if(retrofit == null)
         {
             retrofit = new Retrofit.Builder().baseUrl(ApiInterface.Base_url).addConverterFactory(GsonConverterFactory.create()).build();
-
         }
         return retrofit.create(ApiInterface.class);
     }

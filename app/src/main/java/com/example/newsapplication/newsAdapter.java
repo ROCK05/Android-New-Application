@@ -47,7 +47,7 @@ public class newsAdapter extends RecyclerView.Adapter<newsAdapter.ViewHolder>{
             }
         });
 
-        holder.published.setText("Published: " + arrayList.get(position).getPublishedAt());
+        holder.published.setText(arrayList.get(position).getPublishedAt());
         holder.heading.setText(arrayList.get(position).getTitle());
         holder.description.setText(arrayList.get(position).getDescription());
         //holder.imageView.setImageResource(arrayList.get(position).getUrlToImage());

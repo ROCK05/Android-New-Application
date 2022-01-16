@@ -12,6 +12,7 @@ import com.example.newsapplication.fragments.homeFragment;
 import com.example.newsapplication.fragments.scienceFragment;
 import com.example.newsapplication.fragments.sportsFragment;
 import com.example.newsapplication.fragments.technologyFragment;
+import com.example.newsapplication.fragments.worldFragment;
 
 public class MyAdapter extends FragmentPagerAdapter {
 
@@ -41,6 +42,8 @@ public class MyAdapter extends FragmentPagerAdapter {
                 return new sportsFragment();
             case 6:
                 return new technologyFragment();
+            case 7:
+                return new worldFragment();
             default:
                 return null;
 

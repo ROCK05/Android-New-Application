@@ -25,23 +25,27 @@ import retrofit2.Response;
 
 public class businessFragment extends Fragment {
 
-    String apiKey = "fb7ad87d4c0a4e51af23b8caa9ea8248";
+    // arjunMajithiya
+     String apiKey = "fb7ad87d4c0a4e51af23b8caa9ea8248";
+
+    //201901051
+    //String apiKey = "d4a32a24d6cc4022bd5c62bafdac57ae";
     ArrayList<ModelClass> modelClassArrayList;
     newsAdapter adapter;
-    String country ="in";
+    public static String country ="in";
     private String category = "business";
-    private RecyclerView recyclerView;
+    private RecyclerView recyclerViewBusiness;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_business, null);
-        recyclerView = view.findViewById(R.id.recyclerViewBusiness);
-        modelClassArrayList = new ArrayList<>();
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerViewBusiness = view.findViewById(R.id.recyclerViewBusiness);
+        modelClassArrayList = new ArrayList<ModelClass>();
+        recyclerViewBusiness.setLayoutManager(new LinearLayoutManager(getContext()));
         adapter = new newsAdapter(getContext(), modelClassArrayList);
-        recyclerView.setAdapter(adapter);
+        recyclerViewBusiness.setAdapter(adapter);
         findNews();
         return view;
     }

@@ -26,10 +26,14 @@ import retrofit2.Response;
 
 public class healthFragment extends Fragment {
 
-    String apiKey = "fb7ad87d4c0a4e51af23b8caa9ea8248";
+// arjunMajithiya
+     String apiKey = "fb7ad87d4c0a4e51af23b8caa9ea8248";
+
+    //201901051
+    //String apiKey = "d4a32a24d6cc4022bd5c62bafdac57ae";
     ArrayList<ModelClass> modelClassArrayList;
     newsAdapter adapter;
-    String country ="in";
+    public static String country ="in";
     private String category = "health";
     private RecyclerView recyclerView;
 

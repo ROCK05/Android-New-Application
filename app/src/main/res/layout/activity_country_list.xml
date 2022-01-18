@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".countryListActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/countryToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="15dp"
+        android:background="@color/purple_700"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:subtitleTextAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:titleTextAppearance="@style/TextAppearance.AppCompat.Large"
+        app:titleTextColor="@color/white" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/countryToolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:checkedButton="@id/au"
+                android:fadeScrollbars="true"
+                android:isScrollContainer="false"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="always"
+                android:persistentDrawingCache="scrolling"
+                android:scrollbarAlwaysDrawVerticalTrack="false"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical"
+                android:verticalScrollbarPosition="right">
+
+                <RadioButton
+                    android:id="@+id/ae"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="United Arab Emirates "
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/ar"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="Argentina"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/at"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="Austria"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/au"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="Australia"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/be"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="Belgium"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="Bulgaria"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/br"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="Brazil"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/ca"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="Canada"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/ch"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="@string/Switzerland"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/cn"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="@string/China"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/co"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="@string/Colombia"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/cu"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="@string/Cuba"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/cz"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="@string/Czech_Republic"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/de"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="@string/Germany"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/eg"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="@string/Egypt"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/fr"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="@string/France"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/gb"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="@string/United_Kingdom"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/gr"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="@string/gr"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/hk"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="@string/hk"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/hu"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="@string/hu"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/id"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="@string/id"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/ie"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="@string/ie"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/il"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="@string/il"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/in"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="@string/in"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/it"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="@string/it"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/jp"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="@string/jp"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/kr"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="@string/kr"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/lt"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="@string/lt"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/lv"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="@string/lv"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/ma"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="@string/ma"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/mx"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="@string/mx"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/my"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="@string/my"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/ng"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="@string/ng"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/nl"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="@string/nl"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/no"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="@string/no"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/nz"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="@string/nz"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/ph"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="@string/ph"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/pl"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="@string/pl"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/pt"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="@string/pt"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/ro"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="@string/ro"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/rs"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="@string/rs"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/ru"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="@string/ru"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/sa"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="@string/sa"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/se"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="@string/se"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/sg"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="@string/sg"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/si"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="@string/si"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/sk"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="@string/sk"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/th"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="@string/th"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/tr"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="@string/tr"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/tw"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="@string/tw"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/ua"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="@string/ua"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/us"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="@string/us"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/ve"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="@string/ve"
+                    android:textSize="34sp" />
+
+                <RadioButton
+                    android:id="@+id/za"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:checked="false"
+                    android:text="@string/za"
+                    android:textSize="34sp" />
+
+            </RadioGroup>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

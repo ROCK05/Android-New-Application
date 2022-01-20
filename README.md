@@ -14,9 +14,9 @@
 -> These categories are made using Tab view and fragments(8).\
 -> And the app connected with Api using newsapi.org.\
 -> In the HOME fragment, General news will be shown for a particular country.\
--> In the WORLD fragment, other countries' news will be shown. 
+-> In the WORLD fragment, other countries' news will be shown in English language only. 
 
 
 ## Feature 
--> This app also has a feature of selecting the country and getting news of selected country-category wise.\
+-> This app also has a feature of selecting the country and getting news of selected country-category wise in its native Language.\
 -> This feature is applied using Menu and Radio group. (By default selected country is set to be India).

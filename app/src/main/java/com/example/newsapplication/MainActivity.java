@@ -13,6 +13,8 @@ import android.view.MenuItem;
 
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -84,6 +86,22 @@ public class MainActivity extends AppCompatActivity {
             case R.id.menuCountry:
                 Intent intent = new Intent(this, countryListActivity.class);
                 startActivity(intent);
+                break;
+
+            case R.id.menuAccount:
+                //FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                if(accountProfileActivity.isUserLoggedIn)
+
+            {
+                    Intent intent2 = new Intent(this,accountProfileActivity.class);
+                    startActivity(intent2);
+                }
+                else
+                {
+                    Intent intent1 = new Intent(this, loginActivity1.class);
+                    startActivity(intent1);
+                }
+
                 break;
         }
         return true;

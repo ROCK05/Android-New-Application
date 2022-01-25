@@ -60,7 +60,23 @@
     <string name="us">United States</string>
     <string name="ve">Venezuela</string>
     <string name="za">South Africa</string>
-
+    <string name="AlreadyHaveAnAccount">Already have an Account?</string>
+    <string name="SignUp">Sign up</string>
+    <string name="Login">Log in</string>
+    <string name="Username">Username</string>
+    <string name="Email">Email</string>
+    <string name="Password">Password</string>
+    <string name="account">Account</string>
+    <string name="your_country">Your Country</string>
+    <string name="CreateNewAccount">Create New Account</string>
+    <string name="GoogleLogin">Google</string>
+    <string name="FacebookLogin">Facebook</string>
+    <string name="LogOut">Log Out</string>
+    <string name="MailId">Mail Id</string>
+    <string name="ChangePassword" />
+    <string name="Changepassword">Change Password</string>
+    <string name="CurrentPassword">Current Password</string>
+    <string name="NewPassword">New Password</string>
 
 
 </resources>

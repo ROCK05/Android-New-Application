@@ -4,5 +4,9 @@
 
     <item
         android:id="@+id/menuCountry"
-        android:title="Your Country" />
+        android:title="@string/your_country" />
+
+    <item
+        android:id="@+id/menuAccount"
+        android:title="@string/account" />
 </menu>

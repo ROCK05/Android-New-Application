@@ -1,16 +1,19 @@
 package com.example.newsapplication;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -23,8 +26,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class loginFragment extends Fragment {
 
     EditText emailText,passwordText;
-
-    Button loginButton;
+    Button loginButton, login, signup;
     private FirebaseAuth mAuth;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -35,6 +37,8 @@ public class loginFragment extends Fragment {
         loginButton = (Button) view.findViewById(R.id.login);
         emailText = (EditText) view.findViewById(R.id.emailLogin);
         passwordText = (EditText) view.findViewById(R.id.passwordLogin);
+        login = (Button) view.findViewById(R.id.logInButton);
+        signup = (Button) view.findViewById(R.id.signUpButton);
 
       loginButton.setOnClickListener(new View.OnClickListener() {
           @Override
@@ -68,6 +72,9 @@ public class loginFragment extends Fragment {
                       });
           }
       });
+
+
+
         return view;
     }
 

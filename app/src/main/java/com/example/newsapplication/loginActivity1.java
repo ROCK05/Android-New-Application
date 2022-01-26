@@ -11,6 +11,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -28,9 +30,11 @@ import com.google.firebase.auth.GoogleAuthProvider;
 
 public class loginActivity1 extends AppCompatActivity {
 
-    Button login,signup,google;
+    Button login,signup;
+    ImageButton google;
     GoogleSignInClient mGoogleSignInClient;
     FirebaseAuth mAuth;
+    TextView dontHaveAccount,alreadyHaveAccount;
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +50,10 @@ public class loginActivity1 extends AppCompatActivity {
 
         login = (Button) findViewById(R.id.logInButton);
         signup = (Button) findViewById(R.id.signUpButton);
-        google = (Button) findViewById(R.id.gooleButton);
+        google = (ImageButton) findViewById(R.id.gooleButton);
+        dontHaveAccount = (TextView) findViewById(R.id.dontHaveAccount);
+        alreadyHaveAccount = (TextView) findViewById(R.id.alreadyAccount);
+
         signup.setTextColor(Color.BLUE);
 
 
@@ -64,6 +71,24 @@ public class loginActivity1 extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                alreadyHaveAccount.setVisibility(View.GONE);
+                dontHaveAccount.setVisibility(View.VISIBLE);
+                login.setTextColor(Color.BLUE);
+                signup.setTextColor(Color.BLACK);
+                loginFragment loginFragment = new loginFragment();
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.loginFragmentContainer,loginFragment);
+                transaction.commit();
+
+            }
+        });
+
+        //Login fragment text
+        alreadyHaveAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                alreadyHaveAccount.setVisibility(View.GONE);
+                dontHaveAccount.setVisibility(View.VISIBLE);
                 login.setTextColor(Color.BLUE);
                 signup.setTextColor(Color.BLACK);
                 loginFragment loginFragment = new loginFragment();
@@ -77,12 +102,27 @@ public class loginActivity1 extends AppCompatActivity {
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               // signup.setBackgroundColor(Color.BLUE);
-              //  login.setBackgroundColor(Color.GRAY);
+                dontHaveAccount.setVisibility(View.GONE);
+                alreadyHaveAccount.setVisibility(View.VISIBLE);
                 signup.setTextColor(Color.BLUE);
                 login.setTextColor(Color.BLACK);
                 signUpFragment signUpFragment = new signUpFragment();
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.loginFragmentContainer,signUpFragment);
+                transaction.commit();
+            }
+        });
+
+        //Signup fragment text
+        dontHaveAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dontHaveAccount.setVisibility(View.GONE);
+                alreadyHaveAccount.setVisibility(View.VISIBLE);
+                signup.setTextColor(Color.BLUE);
+                login.setTextColor(Color.BLACK);
+                signUpFragment signUpFragment = new signUpFragment();
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();//.beginTransaction();
                 transaction.replace(R.id.loginFragmentContainer,signUpFragment);
                 transaction.commit();
             }
@@ -104,6 +144,12 @@ public class loginActivity1 extends AppCompatActivity {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
     }
+
+    public static void signOutGoogle()
+    {
+        FirebaseAuth.getInstance().signOut();
+    }
+
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {

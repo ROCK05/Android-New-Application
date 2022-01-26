@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="clip_horizontal|center_vertical"
-    android:background="#FAEEE7"
+    android:background="#C5CAE9"
     android:backgroundTintMode="add"
     tools:context=".accountProfileActivity">
 
@@ -22,8 +22,8 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="110dp"
-        android:layout_height="98dp"
+        android:layout_width="108dp"
+        android:layout_height="91dp"
         android:layout_marginTop="19dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -65,7 +65,7 @@
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_marginStart="25dp"
-                android:background="#24A19C"
+                android:background="@drawable/roundcorner"
                 android:clickable="true"
                 android:focusable="true"
                 app:srcCompat="@android:drawable/ic_menu_edit" />
@@ -75,7 +75,7 @@
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_marginStart="25dp"
-                android:background="#24A19C"
+                android:background="@drawable/roundcorner"
                 app:srcCompat="@android:drawable/ic_menu_save" />
 
         </LinearLayout>
@@ -87,12 +87,14 @@
             android:layout_marginStart="9dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="9dp"
-            android:background="#24A19C"
+            android:background="@drawable/roundcornerractangle"
             android:gravity="center"
             android:hint="@string/Username"
             android:inputType="textPersonName"
             android:minHeight="48dp"
             android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
             android:textIsSelectable="false"
             android:textSize="20sp" />
 
@@ -118,7 +120,7 @@
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_marginStart="25dp"
-                android:background="#24A19C"
+                android:background="@drawable/roundcorner"
                 android:backgroundTintMode="multiply"
                 android:clickable="true"
                 android:focusable="true"
@@ -130,7 +132,7 @@
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_marginStart="25dp"
-                android:background="#24A19C"
+                android:background="@drawable/roundcorner"
                 app:srcCompat="@android:drawable/ic_menu_save" />
 
         </LinearLayout>
@@ -141,7 +143,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="9dp"
             android:layout_marginEnd="9dp"
-            android:background="#24A19C"
+            android:background="@drawable/roundcornerractangle"
             android:backgroundTint="#24A19C"
             android:ems="10"
             android:gravity="center"
@@ -149,6 +151,8 @@
             android:inputType="textEmailAddress"
             android:minHeight="48dp"
             android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
             android:textIsSelectable="true"
             android:textSize="20sp" />
 
@@ -161,31 +165,24 @@
             android:visibility="visible">
 
             <TextView
+                android:id="@+id/changePassword"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right|center_horizontal|center_vertical|end"
                 android:layout_marginStart="9dp"
+                android:clickable="true"
+                android:gravity="center"
+                android:minHeight="48dp"
                 android:text="@string/Changepassword"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
-
-            <ImageButton
-                android:id="@+id/changePasswordButton"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_marginStart="25dp"
-                android:background="#24A19C"
-                android:clickable="true"
-                android:contentDescription="TODO"
-                android:focusable="true"
-                app:srcCompat="@android:drawable/ic_menu_edit" />
 
             <ImageButton
                 android:id="@+id/savePassword"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_marginStart="25dp"
-                android:background="#24A19C"
+                android:background="@drawable/roundcorner"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:srcCompat="@android:drawable/ic_menu_save" />
 
@@ -223,13 +220,15 @@
     <Button
         android:id="@+id/logout"
         style="@android:style/Widget.Material.Button"
-        android:layout_width="100dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginBottom="24dp"
-        android:background="#24A19C"
+        android:background="@drawable/roundcornerractangle"
         android:minHeight="48dp"
+        android:padding="15dp"
         android:text="@string/LogOut"
+        android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

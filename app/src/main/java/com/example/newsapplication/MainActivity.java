@@ -89,10 +89,8 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.menuAccount:
-                //FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                 if(accountProfileActivity.isUserLoggedIn)
-
-            {
+                {
                     Intent intent2 = new Intent(this,accountProfileActivity.class);
                     startActivity(intent2);
                 }

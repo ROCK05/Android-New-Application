@@ -24,7 +24,7 @@
             android:layout_marginEnd="9dp"
             android:layout_marginBottom="0dp"
             android:autoText="false"
-            android:background="@color/white"
+            android:background="@drawable/roundcornerwhitebackground"
             android:ems="10"
             android:hint="@string/Username"
             android:inputType="textPersonName"
@@ -38,7 +38,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="9dp"
             android:layout_marginBottom="10dp"
-            android:background="@color/white"
+            android:background="@drawable/roundcornerwhitebackground"
             android:ems="10"
             android:hint="@string/Email"
             android:inputType="textEmailAddress"
@@ -50,8 +50,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="9dp"
             android:layout_marginEnd="9dp"
-            android:layout_marginBottom="10dp"
-            android:background="@color/white"
+            android:background="@drawable/roundcornerwhitebackground"
             android:ems="10"
             android:hint="@string/Password"
             android:inputType="textPassword"
@@ -63,7 +62,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/roundcornerractangle"
             android:clickable="false"
-            android:text="@string/CreateNewAccount" />
+            android:padding="15dp"
+            android:text="@string/CreateNewAccount"
+            android:textColor="#FFFFFF" />
     </LinearLayout>
 </FrameLayout>

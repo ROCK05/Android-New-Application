@@ -31,17 +31,27 @@
 
             <Button
                 android:id="@+id/signUpButton"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/SignUp" />
+                android:fontFamily="@font/amaranth"
+                android:text="@string/SignUp"
+                android:textColor="#006064"
+                android:textIsSelectable="true"
+                android:textSize="30sp" />
 
             <Button
                 android:id="@+id/logInButton"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/Login" />
+                android:fontFamily="@font/amarante"
+                android:text="@string/Login"
+                android:textColor="#006064"
+                android:textIsSelectable="true"
+                android:textSize="30sp" />
 
         </LinearLayout>
 
@@ -54,37 +64,55 @@
             tools:layout="@layout/fragment_sign_up" />
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="10dp"
             android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/gooleButton"
-                android:layout_width="4dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="5dp"
-                android:layout_marginEnd="2dp"
-                android:layout_weight="1"
-                android:background="@color/white"
-                android:drawableStart="@drawable/common_google_signin_btn_icon_light_normal"
-                android:drawablePadding="5dp"
-                android:drawingCacheQuality="auto"
-                android:scrollbarAlwaysDrawHorizontalTrack="false"
-                android:scrollbarAlwaysDrawVerticalTrack="false"
-                android:text="@string/GoogleLogin" />
-
-            <Button
-                android:id="@+id/facebookButton"
-                android:layout_width="4dp"
+            <TextView
+                android:id="@+id/dontHaveAccount"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="5dp"
+                android:layout_gravity="right"
+                android:layout_marginEnd="9dp"
                 android:layout_weight="1"
-                android:background="@color/purple_700"
-                android:text="@string/FacebookLogin"
-                android:textColor="@color/white" />
+                android:clickable="true"
+                android:gravity="right"
+                android:minHeight="48dp"
+                android:text="@string/DontHaveAccount"
+                android:textColor="@color/black"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/alreadyAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="9dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="@string/AlreadyAccount"
+                android:textColor="@color/black" />
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:text="@string/GoogleConnect"
+            android:textColor="#37474F" />
+
+        <ImageButton
+            android:id="@+id/gooleButton"
+            android:layout_width="59dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/roundcornerwhitebackground"
+            app:srcCompat="@drawable/googleg_standard_color_18" />
 
     </LinearLayout>
 

@@ -1,6 +1,7 @@
 package com.example.newsapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
@@ -10,17 +11,18 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
     TabLayout tabLayout;
     TabItem home, health, enter, business, science, sports, technology, world;
     PagerAdapter pagerAdapter;
+    TabLayout category;
+    ViewPager viewPager;
 
     String api = "fb7ad87d4c0a4e51af23b8caa9ea8248";
 
@@ -31,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.countryToolbar);
         toolbar.setTitle("NewsApp");
         setSupportActionBar(toolbar);
-
+        category= findViewById(R.id.category);
         tabLayout = findViewById(R.id.category);
 
         home = findViewById(R.id.home);
@@ -42,8 +44,9 @@ public class MainActivity extends AppCompatActivity {
         technology = findViewById(R.id.technology);
         business = findViewById(R.id.business);
         world = findViewById(R.id.world);
-        ViewPager viewPager = findViewById(R.id.fragmentContainer);
+        viewPager = findViewById(R.id.fragmentContainer);
 
+        category.setVisibility(View.VISIBLE);
         pagerAdapter = new MyAdapter(getSupportFragmentManager(), 8);
         viewPager.setAdapter(pagerAdapter);
 
@@ -77,6 +80,25 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
         menuInflater.inflate(R.menu.menu, menu);
+
+        MenuItem menuItem = menu.findItem(R.id.action_search);
+        SearchView searchView = (SearchView) menuItem.getActionView();
+        searchView.setQueryHint("Search in a single word only");
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+               Intent intent = new Intent(getApplicationContext(), searchNewsView.class);
+               intent.putExtra("QueryText", query);
+               startActivity(intent);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return false;
+            }
+        });
         return true;
     }
 

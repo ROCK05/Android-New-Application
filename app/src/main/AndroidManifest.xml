@@ -12,9 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
-            android:name=".accountProfileActivity"
+            android:name=".searchNewsView"
             android:exported="false"
             android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".accountProfileActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".loginActivity1"
             android:exported="false"

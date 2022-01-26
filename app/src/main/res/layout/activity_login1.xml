@@ -35,11 +35,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/amaranth"
+                android:fontFamily="@font/biryani_semibold"
                 android:text="@string/SignUp"
                 android:textColor="#006064"
                 android:textIsSelectable="true"
-                android:textSize="30sp" />
+                android:textSize="25sp" />
 
             <Button
                 android:id="@+id/logInButton"
@@ -47,11 +47,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/amarante"
+                android:fontFamily="@font/biryani_semibold"
                 android:text="@string/Login"
                 android:textColor="#006064"
                 android:textIsSelectable="true"
-                android:textSize="30sp" />
+                android:textSize="25sp" />
 
         </LinearLayout>
 

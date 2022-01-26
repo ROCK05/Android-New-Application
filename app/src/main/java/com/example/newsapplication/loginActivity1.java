@@ -55,7 +55,7 @@ public class loginActivity1 extends AppCompatActivity {
         alreadyHaveAccount = (TextView) findViewById(R.id.alreadyAccount);
 
         signup.setTextColor(Color.BLUE);
-
+        login.setTextColor(Color.GRAY);
 
         //Google Signup
         // Configure Google Sign In
@@ -74,7 +74,7 @@ public class loginActivity1 extends AppCompatActivity {
                 alreadyHaveAccount.setVisibility(View.GONE);
                 dontHaveAccount.setVisibility(View.VISIBLE);
                 login.setTextColor(Color.BLUE);
-                signup.setTextColor(Color.BLACK);
+                signup.setTextColor(Color.GRAY);
                 loginFragment loginFragment = new loginFragment();
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
                 transaction.replace(R.id.loginFragmentContainer,loginFragment);
@@ -90,7 +90,7 @@ public class loginActivity1 extends AppCompatActivity {
                 alreadyHaveAccount.setVisibility(View.GONE);
                 dontHaveAccount.setVisibility(View.VISIBLE);
                 login.setTextColor(Color.BLUE);
-                signup.setTextColor(Color.BLACK);
+                signup.setTextColor(Color.GRAY);
                 loginFragment loginFragment = new loginFragment();
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
                 transaction.replace(R.id.loginFragmentContainer,loginFragment);
@@ -105,7 +105,7 @@ public class loginActivity1 extends AppCompatActivity {
                 dontHaveAccount.setVisibility(View.GONE);
                 alreadyHaveAccount.setVisibility(View.VISIBLE);
                 signup.setTextColor(Color.BLUE);
-                login.setTextColor(Color.BLACK);
+                login.setTextColor(Color.GRAY);
                 signUpFragment signUpFragment = new signUpFragment();
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
                 transaction.replace(R.id.loginFragmentContainer,signUpFragment);
@@ -120,7 +120,7 @@ public class loginActivity1 extends AppCompatActivity {
                 dontHaveAccount.setVisibility(View.GONE);
                 alreadyHaveAccount.setVisibility(View.VISIBLE);
                 signup.setTextColor(Color.BLUE);
-                login.setTextColor(Color.BLACK);
+                login.setTextColor(Color.GRAY);
                 signUpFragment signUpFragment = new signUpFragment();
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();//.beginTransaction();
                 transaction.replace(R.id.loginFragmentContainer,signUpFragment);
@@ -179,7 +179,7 @@ public class loginActivity1 extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
-                            //Log.d(TAG, "signInWithCredential:success");
+
                             Toast.makeText(getApplicationContext(), "Logged In with Google", Toast.LENGTH_SHORT).show();
                             FirebaseUser user = mAuth.getCurrentUser();
                             accountProfileActivity.isUserLoggedIn = true;
@@ -191,7 +191,7 @@ public class loginActivity1 extends AppCompatActivity {
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w("TAG", "signInWithCredential:failure", task.getException());
-                            //updateUI(null);
+
                         }
                     }
                 });

@@ -32,4 +32,12 @@ public interface ApiInterface {
             @Query("pageSize") int pageSize,
             @Query("apiKey") String apiKey
     );
+
+    @GET("everything")
+    Call<mainNews> getSearchNews(
+            @Query("q") String q,
+            @Query("language") String language,
+            @Query("pageSize") int pageSize,
+            @Query("apiKey") String apiKey
+    );
 }

@@ -14,7 +14,7 @@
         <activity
             android:name=".searchNewsView"
             android:exported="false"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".accountProfileActivity"
             android:exported="false"
@@ -29,7 +29,8 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".webView"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

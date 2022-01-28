@@ -5,7 +5,6 @@
     android:id="@+id/linearLayout3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="2dp"
     android:background="#C5CAE9"
     android:orientation="vertical"
     tools:context=".fragments.searchFragment">
@@ -14,7 +13,7 @@
         android:id="@+id/searchToolbar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@color/purple_700"
+        android:background="#2962FF"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintBottom_toTopOf="@+id/recyclerViewSearch"

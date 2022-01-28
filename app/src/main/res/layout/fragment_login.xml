@@ -21,11 +21,13 @@
             android:layout_marginEnd="9dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/roundcornerwhitebackground"
+            android:drawableStart="@drawable/email"
+            android:drawablePadding="5dp"
             android:ems="10"
             android:hint="@string/Email"
             android:inputType="textEmailAddress"
             android:minHeight="48dp"
-            android:textColorHint="#D1C4E9"
+            android:padding="10dp"
             tools:ignore="TextContrastCheck,TextContrastCheck" />
 
         <EditText
@@ -36,10 +38,13 @@
             android:layout_marginEnd="9dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/roundcornerwhitebackground"
+            android:drawableStart="@drawable/key"
+            android:drawablePadding="5dp"
             android:ems="10"
             android:hint="@string/Password"
             android:inputType="textPassword"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:paddingStart="10dp" />
 
         <Button
             android:id="@+id/login"

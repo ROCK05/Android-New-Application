@@ -11,8 +11,9 @@
         android:id="@+id/accountToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/purple_700"
+        android:background="#2962FF"
         android:minHeight="?attr/actionBarSize"
+        android:overScrollMode="ifContentScrolls"
         android:theme="?attr/actionBarTheme" />
 
     <LinearLayout
@@ -20,7 +21,9 @@
         android:layout_height="match_parent"
         android:background="#C5CAE9"
         android:gravity="clip_horizontal|center|clip_vertical"
-        android:orientation="vertical">
+        android:isScrollContainer="true"
+        android:orientation="vertical"
+        android:overScrollMode="ifContentScrolls">
 
         <LinearLayout
             android:id="@+id/linearLayout"
@@ -31,26 +34,28 @@
 
             <Button
                 android:id="@+id/signUpButton"
-                style="?android:attr/buttonBarButtonStyle"
+                style="@android:style/Widget.Holo.Light.Button.Borderless.Small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/biryani_semibold"
+                android:clickable="true"
+                android:fontFamily="sans-serif-condensed-medium"
                 android:text="@string/SignUp"
-                android:textColor="#006064"
-                android:textIsSelectable="true"
+                android:textColor="#2962FF"
+                android:textIsSelectable="false"
                 android:textSize="25sp" />
 
             <Button
                 android:id="@+id/logInButton"
-                style="?android:attr/buttonBarButtonStyle"
+                style="@android:style/Widget.Holo.Light.Button.Borderless.Small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/biryani_semibold"
+                android:clickable="true"
+                android:fontFamily="sans-serif-condensed-medium"
                 android:text="@string/Login"
-                android:textColor="#006064"
-                android:textIsSelectable="true"
+                android:textColor="#2962FF"
+                android:textIsSelectable="false"
                 android:textSize="25sp" />
 
         </LinearLayout>
@@ -81,7 +86,7 @@
                 android:gravity="right"
                 android:minHeight="48dp"
                 android:text="@string/DontHaveAccount"
-                android:textColor="@color/black"
+                android:textColor="#2962FF"
                 android:visibility="gone" />
 
             <TextView
@@ -94,7 +99,7 @@
                 android:layout_weight="1"
                 android:gravity="right"
                 android:text="@string/AlreadyAccount"
-                android:textColor="@color/black" />
+                android:textColor="#2962FF" />
         </LinearLayout>
 
         <TextView

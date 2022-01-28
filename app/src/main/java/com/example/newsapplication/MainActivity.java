@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     TabLayout tabLayout;
     TabItem home, health, enter, business, science, sports, technology, world;
     PagerAdapter pagerAdapter;
-    TabLayout category;
+
     ViewPager viewPager;
 
     String api = "fb7ad87d4c0a4e51af23b8caa9ea8248";
@@ -33,8 +33,18 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.countryToolbar);
         toolbar.setTitle("NewsApp");
         setSupportActionBar(toolbar);
-        category= findViewById(R.id.category);
+
         tabLayout = findViewById(R.id.category);
+        final int[] ICONS = new int[]{
+                R.drawable.topnews,
+                R.drawable.health,
+                R.drawable.entertainment,
+                R.drawable.science,
+                R.drawable.business,
+                R.drawable.sports,
+                R.drawable.technology,
+                R.drawable.world
+                };
 
         home = findViewById(R.id.home);
         health = findViewById(R.id.health);
@@ -46,9 +56,17 @@ public class MainActivity extends AppCompatActivity {
         world = findViewById(R.id.world);
         viewPager = findViewById(R.id.fragmentContainer);
 
-        category.setVisibility(View.VISIBLE);
         pagerAdapter = new MyAdapter(getSupportFragmentManager(), 8);
         viewPager.setAdapter(pagerAdapter);
+
+        tabLayout.getTabAt(0).setIcon(ICONS[0]);
+        tabLayout.getTabAt(1).setIcon(ICONS[1]);
+        tabLayout.getTabAt(2).setIcon(ICONS[2]);
+        tabLayout.getTabAt(3).setIcon(ICONS[3]);
+        tabLayout.getTabAt(4).setIcon(ICONS[4]);
+        tabLayout.getTabAt(5).setIcon(ICONS[5]);
+        tabLayout.getTabAt(6).setIcon(ICONS[6]);
+        tabLayout.getTabAt(7).setIcon(ICONS[7]);
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override

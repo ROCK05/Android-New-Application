@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -45,6 +46,8 @@ public class accountProfileActivity extends AppCompatActivity {
     TextView changePassword;
     GoogleSignInClient mGoogleSignInClient;
     FirebaseAuth mAuth;
+    ImageButton editProfile;
+
     public static String getPassword() {
         return password;
     }
@@ -79,11 +82,11 @@ public class accountProfileActivity extends AppCompatActivity {
         passWordLinearLayout = (LinearLayout) findViewById(R.id.changePasswordLayout);
         changePassword = (TextView) findViewById(R.id.changePassword);
 
+
         if(accountProfileActivity.getPassword().equals("null"))
         {
             passWordLinearLayout.setVisibility(View.GONE);
         }
-
 
         //Google Signup
         // Configure Google Sign In
@@ -145,12 +148,12 @@ public class accountProfileActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();//loginFragment.getUserLogin();
-                accountProfileActivity.email = emailView.getText().toString();
-                user.updateEmail(accountProfileActivity.email).addOnCompleteListener(new OnCompleteListener<Void>() {
+
+                user.updateEmail(emailView.getText().toString()).addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
                                 if (task.isSuccessful()) {
-                                    //Log.d(TAG, "User email address updated.");
+                                    accountProfileActivity.email = emailView.getText().toString();
                                     emailView.setEnabled(false);
                                     emailView.setText(accountProfileActivity.email);
                                     saveMail.setVisibility(View.GONE);
@@ -224,57 +227,4 @@ public class accountProfileActivity extends AppCompatActivity {
         });
     }
 
-    int RC_SIGN_IN = 65;
-    public void signIn() {
-        Intent signInIntent = mGoogleSignInClient.getSignInIntent();
-        startActivityForResult(signInIntent, RC_SIGN_IN);
-    }
-
-
-
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        // Result returned from launching the Intent from GoogleSignInApi.getSignInIntent(...);
-        if (requestCode == RC_SIGN_IN) {
-            Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
-            try {
-                // Google Sign In was successful, authenticate with Firebase
-                GoogleSignInAccount account = task.getResult(ApiException.class);
-                Log.d("TAG", "firebaseAuthWithGoogle:" + account.getId());
-                firebaseAuthWithGoogle(account.getIdToken());
-            } catch (ApiException e) {
-                // Google Sign In failed, update UI appropriately
-                Log.w("TAG", "Google sign in failed", e);
-            }
-        }
-    }
-
-
-    private void firebaseAuthWithGoogle(String idToken) {
-        AuthCredential credential = GoogleAuthProvider.getCredential(idToken, null);
-        mAuth.signInWithCredential(credential)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
-                            //Log.d(TAG, "signInWithCredential:success");
-                            Toast.makeText(getApplicationContext(), "Logged In with Google", Toast.LENGTH_SHORT).show();
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            accountProfileActivity.isUserLoggedIn = true;
-                            accountProfileActivity.email = user.getEmail();
-                            accountProfileActivity.username = user.getDisplayName();
-                            Intent intent = new Intent(getApplicationContext(),accountProfileActivity.class);
-                            startActivity(intent);
-
-                        } else {
-                            // If sign in fails, display a message to the user.
-                            Log.w("TAG", "signInWithCredential:failure", task.getException());
-                            //updateUI(null);
-                        }
-                    }
-                });
-    }
 }

@@ -54,7 +54,7 @@ public class loginActivity1 extends AppCompatActivity {
         dontHaveAccount = (TextView) findViewById(R.id.dontHaveAccount);
         alreadyHaveAccount = (TextView) findViewById(R.id.alreadyAccount);
 
-        signup.setTextColor(Color.BLUE);
+        signup.setTextColor(getResources().getColor(R.color.buttonColor));
         login.setTextColor(Color.GRAY);
 
         //Google Signup
@@ -73,7 +73,7 @@ public class loginActivity1 extends AppCompatActivity {
             public void onClick(View view) {
                 alreadyHaveAccount.setVisibility(View.GONE);
                 dontHaveAccount.setVisibility(View.VISIBLE);
-                login.setTextColor(Color.BLUE);
+                login.setTextColor(getResources().getColor(R.color.buttonColor));
                 signup.setTextColor(Color.GRAY);
                 loginFragment loginFragment = new loginFragment();
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
@@ -89,7 +89,7 @@ public class loginActivity1 extends AppCompatActivity {
             public void onClick(View view) {
                 alreadyHaveAccount.setVisibility(View.GONE);
                 dontHaveAccount.setVisibility(View.VISIBLE);
-                login.setTextColor(Color.BLUE);
+                login.setTextColor(getResources().getColor(R.color.buttonColor));
                 signup.setTextColor(Color.GRAY);
                 loginFragment loginFragment = new loginFragment();
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
@@ -104,7 +104,7 @@ public class loginActivity1 extends AppCompatActivity {
             public void onClick(View view) {
                 dontHaveAccount.setVisibility(View.GONE);
                 alreadyHaveAccount.setVisibility(View.VISIBLE);
-                signup.setTextColor(Color.BLUE);
+                signup.setTextColor(getResources().getColor(R.color.buttonColor));
                 login.setTextColor(Color.GRAY);
                 signUpFragment signUpFragment = new signUpFragment();
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
@@ -119,7 +119,7 @@ public class loginActivity1 extends AppCompatActivity {
             public void onClick(View view) {
                 dontHaveAccount.setVisibility(View.GONE);
                 alreadyHaveAccount.setVisibility(View.VISIBLE);
-                signup.setTextColor(Color.BLUE);
+                signup.setTextColor(getResources().getColor(R.color.buttonColor));
                 login.setTextColor(Color.GRAY);
                 signUpFragment signUpFragment = new signUpFragment();
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();//.beginTransaction();

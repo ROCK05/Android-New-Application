@@ -14,20 +14,19 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginBottom="2dp"
-        android:background="@color/purple_700"
+        android:background="#2962FF"
         app:layout_constraintBottom_toTopOf="@+id/scrollView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:subtitleTextAppearance="@style/TextAppearance.AppCompat.Body1"
         app:titleTextAppearance="@style/TextAppearance.AppCompat.Large"
-        app:titleTextColor="@color/white" />
+        app:titleTextColor="@color/black" />
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="397dp"
-        android:layout_height="687dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="#C5CAE9"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -60,7 +59,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="United Arab Emirates "
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/ar"
@@ -68,7 +67,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="Argentina"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/at"
@@ -76,7 +75,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="Austria"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/au"
@@ -84,7 +83,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="Australia"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/be"
@@ -92,7 +91,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="Belgium"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/bg"
@@ -100,7 +99,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="Bulgaria"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/br"
@@ -108,7 +107,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="Brazil"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/ca"
@@ -116,7 +115,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="Canada"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/ch"
@@ -124,7 +123,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="@string/Switzerland"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/cn"
@@ -132,7 +131,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="@string/China"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/co"
@@ -140,7 +139,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="@string/Colombia"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/cu"
@@ -148,7 +147,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="@string/Cuba"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/cz"
@@ -156,7 +155,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="@string/Czech_Republic"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/de"
@@ -164,7 +163,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="@string/Germany"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/eg"
@@ -172,7 +171,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="@string/Egypt"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/fr"
@@ -180,7 +179,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="@string/France"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/gb"
@@ -188,7 +187,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="@string/United_Kingdom"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/gr"
@@ -196,7 +195,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="@string/gr"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/hk"
@@ -204,7 +203,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="@string/hk"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/hu"
@@ -212,7 +211,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="@string/hu"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/id"
@@ -220,7 +219,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="@string/id"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/ie"
@@ -228,7 +227,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="@string/ie"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/il"
@@ -236,7 +235,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="@string/il"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/in"
@@ -244,7 +243,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="@string/in"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/it"
@@ -252,7 +251,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="@string/it"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/jp"
@@ -260,7 +259,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="@string/jp"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/kr"
@@ -268,7 +267,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="@string/kr"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/lt"
@@ -276,7 +275,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="@string/lt"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/lv"
@@ -284,7 +283,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="@string/lv"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/ma"
@@ -292,7 +291,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="@string/ma"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/mx"
@@ -300,7 +299,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="@string/mx"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/my"
@@ -308,7 +307,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="@string/my"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/ng"
@@ -316,7 +315,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="@string/ng"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/nl"
@@ -324,7 +323,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="@string/nl"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/no"
@@ -332,7 +331,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="@string/no"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/nz"
@@ -340,7 +339,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="@string/nz"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/ph"
@@ -348,7 +347,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="@string/ph"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/pl"
@@ -356,7 +355,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="@string/pl"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/pt"
@@ -364,7 +363,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="@string/pt"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/ro"
@@ -372,7 +371,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="@string/ro"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/rs"
@@ -380,7 +379,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="@string/rs"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/ru"
@@ -388,7 +387,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="@string/ru"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/sa"
@@ -396,7 +395,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="@string/sa"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/se"
@@ -404,7 +403,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="@string/se"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/sg"
@@ -412,7 +411,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="@string/sg"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/si"
@@ -420,7 +419,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="@string/si"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/sk"
@@ -428,7 +427,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="@string/sk"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/th"
@@ -436,7 +435,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="@string/th"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/tr"
@@ -444,7 +443,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="@string/tr"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/tw"
@@ -452,7 +451,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="@string/tw"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/ua"
@@ -460,7 +459,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="@string/ua"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/us"
@@ -468,7 +467,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="@string/us"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/ve"
@@ -476,7 +475,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="@string/ve"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
                 <RadioButton
                     android:id="@+id/za"
@@ -484,7 +483,7 @@
                     android:layout_height="48dp"
                     android:checked="false"
                     android:text="@string/za"
-                    android:textSize="34sp" />
+                    android:textSize="27sp" />
 
             </RadioGroup>
         </LinearLayout>

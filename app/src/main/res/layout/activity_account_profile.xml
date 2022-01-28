@@ -13,7 +13,7 @@
         android:id="@+id/toolbarAccount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/purple_700"
+        android:background="#2962FF"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,29 +21,33 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="108dp"
-        android:layout_height="91dp"
-        android:layout_marginTop="19dp"
+        android:id="@+id/profilPic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/roundcornerwhitebackground"
+        android:clickable="true"
+        android:overScrollMode="ifContentScrolls"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbarAccount"
-        app:srcCompat="@drawable/img" />
+        app:srcCompat="@drawable/avatar0" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="0dp"
         android:layout_height="442dp"
-        android:layout_marginTop="29dp"
+        android:layout_marginTop="50dp"
         android:layout_marginBottom="88dp"
         android:foregroundGravity="right"
         android:orientation="vertical"
+        android:overScrollMode="ifContentScrolls"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3">
+        app:layout_constraintTop_toBottomOf="@+id/profilPic">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -68,7 +72,7 @@
                 android:background="@drawable/roundcorner"
                 android:clickable="true"
                 android:focusable="true"
-                app:srcCompat="@android:drawable/ic_menu_edit" />
+                app:srcCompat="@drawable/edit" />
 
             <ImageButton
                 android:id="@+id/saveUserName"
@@ -88,11 +92,13 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="9dp"
             android:background="@drawable/roundcornerractangle"
-            android:gravity="center"
+            android:drawableStart="@drawable/avatarlogin"
+            android:drawablePadding="5dp"
             android:hint="@string/Username"
             android:inputType="textPersonName"
             android:minHeight="48dp"
-            android:textAlignment="center"
+            android:paddingStart="5dp"
+            android:textAlignment="viewStart"
             android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF"
             android:textIsSelectable="false"
@@ -125,7 +131,7 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:outlineProvider="bounds"
-                app:srcCompat="@android:drawable/ic_menu_edit" />
+                app:srcCompat="@drawable/edit" />
 
             <ImageButton
                 android:id="@+id/saveEmail"
@@ -144,16 +150,18 @@
             android:layout_marginStart="9dp"
             android:layout_marginEnd="9dp"
             android:background="@drawable/roundcornerractangle"
-            android:backgroundTint="#24A19C"
+            android:drawableStart="@drawable/emaillogin"
+            android:drawablePadding="10dp"
             android:ems="10"
-            android:gravity="center"
             android:hint="@string/Email"
+            android:includeFontPadding="true"
             android:inputType="textEmailAddress"
             android:minHeight="48dp"
-            android:textAlignment="center"
+            android:paddingLeft="5dp"
+            android:textAlignment="viewStart"
             android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF"
-            android:textIsSelectable="true"
+            android:textIsSelectable="false"
             android:textSize="20sp" />
 
         <LinearLayout
@@ -174,7 +182,7 @@
                 android:gravity="center"
                 android:minHeight="48dp"
                 android:text="@string/Changepassword"
-                android:textColor="@color/black"
+                android:textColor="#2962FF"
                 android:textSize="18sp" />
 
             <ImageButton
@@ -226,6 +234,7 @@
         android:layout_marginBottom="24dp"
         android:background="@drawable/roundcornerractangle"
         android:minHeight="48dp"
+        android:overScrollMode="ifContentScrolls"
         android:padding="15dp"
         android:text="@string/LogOut"
         android:textColor="#FFFFFF"

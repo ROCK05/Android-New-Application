@@ -1,6 +1,7 @@
 package com.example.newsapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,6 +15,10 @@ public class webView extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web_view);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.webToolbar);
+        toolbar.setTitle("Full News");
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         webView = findViewById(R.id.webView);
         Intent intent = getIntent();

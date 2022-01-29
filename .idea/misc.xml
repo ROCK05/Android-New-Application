@@ -27,6 +27,7 @@
         <entry key="..\:/WOC4_Project/Git-Project/woc4.0-android-newsapp-Arjun/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/WOC4_Project/Git-Project/woc4.0-android-newsapp-Arjun/app/src/main/res/layout/activity_profile_pic.xml" value="0.22" />
         <entry key="..\:/WOC4_Project/Git-Project/woc4.0-android-newsapp-Arjun/app/src/main/res/layout/activity_search_news_view.xml" value="0.3333333333333333" />
+        <entry key="..\:/WOC4_Project/Git-Project/woc4.0-android-newsapp-Arjun/app/src/main/res/layout/activity_splash_screen.xml" value="0.1796875" />
         <entry key="..\:/WOC4_Project/Git-Project/woc4.0-android-newsapp-Arjun/app/src/main/res/layout/activity_web_view.xml" value="0.16666666666666666" />
         <entry key="..\:/WOC4_Project/Git-Project/woc4.0-android-newsapp-Arjun/app/src/main/res/layout/fragment_business.xml" value="0.1796875" />
         <entry key="..\:/WOC4_Project/Git-Project/woc4.0-android-newsapp-Arjun/app/src/main/res/layout/fragment_entertainment.xml" value="0.1796875" />
@@ -45,6 +46,7 @@
       </map>
     </option>
   </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

@@ -16,7 +16,7 @@ public class webView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web_view);
         Toolbar toolbar = (Toolbar) findViewById(R.id.webToolbar);
-        toolbar.setTitle("Full News");
+        toolbar.setTitle("Detailed News");
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 

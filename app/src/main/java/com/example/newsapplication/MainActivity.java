@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
 
         MenuItem menuItem = menu.findItem(R.id.action_search);
         SearchView searchView = (SearchView) menuItem.getActionView();
-        searchView.setQueryHint("Search in a single word only");
+        searchView.setQueryHint("Search...");
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override

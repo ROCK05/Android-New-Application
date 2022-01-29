@@ -1,5 +1,7 @@
 package com.example.newsapplication;
 
+import static java.net.URLEncoder.encode;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -8,6 +10,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import com.google.firebase.crashlytics.buildtools.reloc.org.apache.http.client.utils.URIBuilder;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URISyntaxException;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
 import retrofit2.Call;
@@ -16,10 +24,10 @@ import retrofit2.Response;
 
 public class searchNewsView extends AppCompatActivity {
     // arjunMajithiya
-    String apiKey = "fb7ad87d4c0a4e51af23b8caa9ea8248";
+    //String apiKey = "fb7ad87d4c0a4e51af23b8caa9ea8248";
 
     //201901051
-    //String apiKey = "d4a32a24d6cc4022bd5c62bafdac57ae";
+    String apiKey = "d4a32a24d6cc4022bd5c62bafdac57ae";
     ArrayList<ModelClass> modelClassArrayList;
     newsAdapter adapter;
     //public static String country = "in";
@@ -29,21 +37,27 @@ public class searchNewsView extends AppCompatActivity {
         setContentView(R.layout.activity_search_news_view);
 
         Bundle extras = getIntent().getExtras();
-        String Query = "";
+        String Query = " ";
         if (extras != null) {
             Query = extras.getString("QueryText");
         }
-
         Toolbar toolbar = (Toolbar) findViewById(R.id.searchToolbar);
         toolbar.setTitle(Query);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         RecyclerView recyclerViewSearch = findViewById(R.id.recyclerViewSearch);
         modelClassArrayList = new ArrayList<ModelClass>();
         recyclerViewSearch.setLayoutManager(new LinearLayoutManager(this));
         adapter = new newsAdapter(this, modelClassArrayList);
         recyclerViewSearch.setAdapter(adapter);
-        findNews(Query);
+        String q = null;
+        try {
+            q = URLEncoder.encode(Query, StandardCharsets.UTF_8.toString());
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        findNews(q);
     }
 
     private void findNews(String query){

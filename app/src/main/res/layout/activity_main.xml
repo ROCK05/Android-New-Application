@@ -37,7 +37,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:clickable="false"
-            android:foreground="@android:drawable/checkbox_on_background"
             android:text="@string/Home"
             android:tint="@color/purple_700"
             app:tint="@color/purple_700" />

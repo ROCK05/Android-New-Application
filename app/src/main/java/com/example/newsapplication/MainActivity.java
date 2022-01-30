@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.countryToolbar);
-        toolbar.setTitle("NewsApp");
+        toolbar.setTitle("GlobeNews");
         setSupportActionBar(toolbar);
 
         tabLayout = findViewById(R.id.category);

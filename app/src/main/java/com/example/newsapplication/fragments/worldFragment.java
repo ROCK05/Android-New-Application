@@ -17,7 +17,10 @@ import com.example.newsapplication.mainNews;
 import com.example.newsapplication.newsAdapter;
 import com.example.newsapplication.utilities;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.Locale;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -32,8 +35,7 @@ public class worldFragment extends Fragment {
    // String apiKey = "d4a32a24d6cc4022bd5c62bafdac57ae";
     ArrayList<ModelClass> modelClassArrayList;
     newsAdapter adapter;
-    //static String country ="in";
-    //private String category = "technology";
+    String date = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date());
     static String language = "en";
     private RecyclerView recyclerView;
 
@@ -53,7 +55,7 @@ public class worldFragment extends Fragment {
 
 
     private void findNews(){
-        utilities.getApiInterface().getWorldNews("a",language,10, apiKey).enqueue(new Callback<mainNews>() {
+        utilities.getApiInterface().getWorldNews("a",date,language,10, apiKey).enqueue(new Callback<mainNews>() {
             @Override
             public void onResponse(Call<mainNews> call, Response<mainNews> response) {
                 if(response.isSuccessful())

@@ -7,6 +7,7 @@ import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
+import android.content.pm.ApplicationInfo;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -23,8 +24,7 @@ public class MainActivity extends AppCompatActivity {
     PagerAdapter pagerAdapter;
 
     ViewPager viewPager;
-
-    String api = "fb7ad87d4c0a4e51af23b8caa9ea8248";
+    public static String apiKey = "fb7ad87d4c0a4e51af23b8caa9ea8248";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

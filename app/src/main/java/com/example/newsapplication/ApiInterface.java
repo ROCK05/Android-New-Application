@@ -28,6 +28,7 @@ public interface ApiInterface {
     @GET("everything")
     Call<mainNews> getWorldNews(
             @Query("q") String q,
+            @Query("from") String date,
             @Query("language") String language,
             @Query("pageSize") int pageSize,
             @Query("apiKey") String apiKey

@@ -28,11 +28,8 @@ import retrofit2.Response;
 
 public class worldFragment extends Fragment {
 
-    // arjunMajithiya
-    String apiKey = "fb7ad87d4c0a4e51af23b8caa9ea8248";
 
-    //201901051
-   // String apiKey = "d4a32a24d6cc4022bd5c62bafdac57ae";
+    String apiKey = "fb7ad87d4c0a4e51af23b8caa9ea8248";
     ArrayList<ModelClass> modelClassArrayList;
     newsAdapter adapter;
     String date = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date());
@@ -55,7 +52,7 @@ public class worldFragment extends Fragment {
 
 
     private void findNews(){
-        utilities.getApiInterface().getWorldNews("a",date,language,10, apiKey).enqueue(new Callback<mainNews>() {
+        utilities.getApiInterface().getWorldNews("a",date,language,100, apiKey).enqueue(new Callback<mainNews>() {
             @Override
             public void onResponse(Call<mainNews> call, Response<mainNews> response) {
                 if(response.isSuccessful())

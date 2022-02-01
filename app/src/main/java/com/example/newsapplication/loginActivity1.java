@@ -58,7 +58,6 @@ public class loginActivity1 extends AppCompatActivity {
         login.setTextColor(Color.GRAY);
 
         //Google Signup
-        // Configure Google Sign In
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
@@ -136,7 +135,6 @@ public class loginActivity1 extends AppCompatActivity {
             }
         });
 
-
     }
 
     int RC_SIGN_IN = 65;
@@ -149,7 +147,6 @@ public class loginActivity1 extends AppCompatActivity {
     {
         FirebaseAuth.getInstance().signOut();
     }
-
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -170,7 +167,6 @@ public class loginActivity1 extends AppCompatActivity {
         }
     }
 
-
     private void firebaseAuthWithGoogle(String idToken) {
         AuthCredential credential = GoogleAuthProvider.getCredential(idToken, null);
         mAuth.signInWithCredential(credential)
@@ -179,7 +175,6 @@ public class loginActivity1 extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
-
                             Toast.makeText(getApplicationContext(), "Logged In with Google", Toast.LENGTH_SHORT).show();
                             FirebaseUser user = mAuth.getCurrentUser();
                             accountProfileActivity.isUserLoggedIn = true;

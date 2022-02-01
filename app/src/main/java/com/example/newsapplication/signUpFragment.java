@@ -85,12 +85,6 @@ public class signUpFragment extends Fragment {
                 }
             }
         });
-
-
-
         return view;
     }
-
-
-
 }

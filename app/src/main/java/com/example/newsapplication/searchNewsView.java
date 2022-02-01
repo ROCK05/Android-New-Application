@@ -23,14 +23,11 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class searchNewsView extends AppCompatActivity {
-    // arjunMajithiya
-    //String apiKey = "fb7ad87d4c0a4e51af23b8caa9ea8248";
 
-    //201901051
-    String apiKey = "d4a32a24d6cc4022bd5c62bafdac57ae";
+    String apiKey = "fb7ad87d4c0a4e51af23b8caa9ea8248";
     ArrayList<ModelClass> modelClassArrayList;
     newsAdapter adapter;
-    //public static String country = "in";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,7 +58,7 @@ public class searchNewsView extends AppCompatActivity {
     }
 
     private void findNews(String query){
-        utilities.getApiInterface().getSearchNews(query, "en",10, apiKey).enqueue(new Callback<mainNews>() {
+        utilities.getApiInterface().getSearchNews(query, "en","relevancy",100, apiKey).enqueue(new Callback<mainNews>() {
             @Override
             public void onResponse(@NonNull Call<mainNews> call, @NonNull Response<mainNews> response) {
                 if(response.isSuccessful())

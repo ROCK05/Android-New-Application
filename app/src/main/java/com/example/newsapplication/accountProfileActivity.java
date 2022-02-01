@@ -46,7 +46,6 @@ public class accountProfileActivity extends AppCompatActivity {
     TextView changePassword;
     GoogleSignInClient mGoogleSignInClient;
     FirebaseAuth mAuth;
-    ImageButton editProfile;
 
     public static String getPassword() {
         return password;
@@ -72,7 +71,6 @@ public class accountProfileActivity extends AppCompatActivity {
         emailView = (EditText) findViewById(R.id.mailPage);
         editUsername = (ImageButton) findViewById(R.id.changeUsernameButton);
         editEmail = (ImageButton) findViewById(R.id.changeEmailButton);
-        //editPassword = (ImageButton) findViewById(R.id.changePasswordButton);
         saveMail = (ImageButton) findViewById(R.id.saveEmail);
         saveUsername = (ImageButton) findViewById(R.id.saveUserName);
         savePassword = (ImageButton) findViewById(R.id.savePassword);
@@ -130,6 +128,7 @@ public class accountProfileActivity extends AppCompatActivity {
                     accountProfileActivity.username = changedUserName;
                     userNameView.setText(accountProfileActivity.username);
                     saveUsername.setVisibility(View.GONE);
+                    Toast.makeText(getApplicationContext(), "Username updated successfully", Toast.LENGTH_SHORT).show();
                 }
                 editUsername.setVisibility(View.VISIBLE);
             }
@@ -157,6 +156,7 @@ public class accountProfileActivity extends AppCompatActivity {
                                     emailView.setEnabled(false);
                                     emailView.setText(accountProfileActivity.email);
                                     saveMail.setVisibility(View.GONE);
+                                    Toast.makeText(getApplicationContext(), "Email updated successfully", Toast.LENGTH_SHORT).show();
                                 }
                                 else
                                 {
@@ -174,7 +174,6 @@ public class accountProfileActivity extends AppCompatActivity {
                 currentPasswordView.setVisibility(View.VISIBLE);
                 newPasswordView.setVisibility(View.VISIBLE);
                 savePassword.setVisibility(View.VISIBLE);
-                //editPassword.setVisibility(View.GONE);
             }
         });
 
@@ -197,18 +196,17 @@ public class accountProfileActivity extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()) {
-                                       // Log.d(TAG, "User password updated.");
                                         currentPasswordView.setVisibility(View.GONE);
                                         newPasswordView.setVisibility(View.GONE);
                                         savePassword.setVisibility(View.GONE);
                                         if(!finalNewPassword.equals("null"))
                                         accountProfileActivity.setPassword(finalNewPassword);
+                                        Toast.makeText(getApplicationContext(), "Password changed successfully", Toast.LENGTH_SHORT).show();
                                     }
                                     else
                                     {
                                         Toast.makeText(getApplicationContext(), task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                                     }
-                                    //editPassword.setVisibility(View.VISIBLE);
                                 }
                             });
                 }

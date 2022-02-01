@@ -26,11 +26,9 @@ import retrofit2.Response;
 
 public class technologyFragment extends Fragment {
 
-    // arjunMajithiya
+
      String apiKey = "fb7ad87d4c0a4e51af23b8caa9ea8248";
 
-    //201901051
-    //String apiKey = "d4a32a24d6cc4022bd5c62bafdac57ae";
     ArrayList<ModelClass> modelClassArrayList;
     newsAdapter adapter;
     public static String country ="in";
@@ -53,7 +51,7 @@ public class technologyFragment extends Fragment {
 
 
     private void findNews(){
-        utilities.getApiInterface().getCategoryNews(country,category, 10, apiKey).enqueue(new Callback<mainNews>() {
+        utilities.getApiInterface().getCategoryNews(country,category, 100, apiKey).enqueue(new Callback<mainNews>() {
             @Override
             public void onResponse(Call<mainNews> call, Response<mainNews> response) {
                 if(response.isSuccessful())

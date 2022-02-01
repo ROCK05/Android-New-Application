@@ -21,8 +21,6 @@ import com.example.newsapplication.fragments.sportsFragment;
 import com.example.newsapplication.fragments.technologyFragment;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 public class countryListActivity extends AppCompatActivity {
 
@@ -51,7 +49,6 @@ public class countryListActivity extends AppCompatActivity {
                         switch (checkedId)
                         {
                             case R.id.ae:
-                                //c = "ae";
                                 c = countries.countryCodes[0];
                                 countries.index = 0;
                             break;

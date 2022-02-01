@@ -38,6 +38,7 @@ public interface ApiInterface {
     Call<mainNews> getSearchNews(
             @Query("q") String q,
             @Query("language") String language,
+            @Query("sortBy") String sortBy,
             @Query("pageSize") int pageSize,
             @Query("apiKey") String apiKey
     );

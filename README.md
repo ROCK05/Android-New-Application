@@ -1,25 +1,15 @@
-# woc4.0-android-newsapp-Arjun
+# Android News Application
 
 
 <img src= "https://user-images.githubusercontent.com/76915666/151708276-cb145ce1-0f46-4863-a01a-7a7170117722.png" width="100">
-GlobeNews- Api Based News Application
+GlobeNews - News Application
 
 ## Description
-GlobeNews is an API-based android news application for getting news from more than 50+ country-category wise. This app is made as a part of **Winter of Code 4.0 - DAIICT, Gandhinagar**. The tool used is Android studio, a Programming language used is JAVA. Moreover, it is also connected with API: [newsapi.org](https://newsapi.org/) using Retrofit and connected with firebase to manage Login and Signup.
+GlobeNews is a feature-rich Android application designed to provide news from over 50+ countries, categorized by various topics. It leverages modern technologies such as Retrofit for API integration and Firebase for user authentication, all within the Android Studio environment using Java.
 
-Some highlight features:
-* Getting category-wise news which includes eight categories.
-* Read headlines with pictures and tap news to read the full article.
-* Select Country among 54 options and get that particular country's news category-wise in its native language or in English.
-* Search any topic and get news about that.
-* Login/Signup using Email with password authentication or Login/Signup with Google. 
-* Edit Mail, Username and Password.
+## Features
 
-### Clone source: https://github.com/ROCK05/woc4.0-android-newsapp-Arjun.git
-
-## Overview:
-
-* App has eight categories
+* Category-wise News: Access news across eight distinct categories:
 1. Home
 2. Health 
 3. Entertainment
@@ -28,21 +18,23 @@ Some highlight features:
 6. Sports
 7. Technology
 8. World
+   
+* Country Selection: Choose from 50+ countries to receive news in the native language or English. The default country is set to India.
+* News Search: Search for specific topics and get relevant news articles.
+* Headline Browsing: View headlines with images and tap to read the full article.
+* User Authentication:
+  * Sign up or log in using Email and Password authentication.
+  * Alternatively, use Google for one-tap sign-up/login.
+  * Manage your account by editing your email, username, and password.
+* Splash Screen: Enjoy a brief splash screen upon opening the app.
 
--> In the HOME fragment, General news will be shown for a particular country.\
--> In the WORLD fragment, other countries' news will be shown in English language only.\
--> And the app connected with Api using newsapi.org.\
--> It is also connected with firebase for login/signup activity.
+## Technical Overview
+* API Integration: GlobeNews connects to newsapi.org using Retrofit to fetch news articles.
+* User Authentication: Firebase is integrated for secure login and sign-up processes.
 
-## Features
-* This app has a feature of selecting the country from 54 available options and getting news of selected country-category wise in its native Language.\
-* This feature is applied using Menu and Radio group. (By default selected country is set to be India).\
-* Also user can search for any topic and can get news about that.
-* App has feature of Sign up through Email and Password authentication is also there.
-* User can Login through Email and Password and can also change Username, Email and password if he/she wants.
-* User can also signup/login through Google.
-* Logout option is also there.
-* While opening it shows splash screen for 1 second :).
+## Development Tools
+* Android Studio: The primary development environment.
+* Java: The core programming language used.
 
 ## Images
 
